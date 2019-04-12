@@ -1,0 +1,37 @@
+<ion-header>
+
+  <ion-navbar>
+      <button ion-button menuToggle>
+          <ion-icon name="menu"></ion-icon>
+      </button>
+    <ion-title>Livro</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+
+  <button ion-button full (click)="novoLivro()" color="dark" round clear>Novo Livro</button>
+
+  <ion-card *ngFor="let l of listaDeLivros">
+
+    <ion-card-header>
+     {{l?.titulo}}
+    </ion-card-header>
+  
+    <ion-card-content>
+      <ion-icon name="contact"></ion-icon> {{l?.autor}} <br>
+      <ion-icon name="cash"></ion-icon> {{l?.preco}} <br>
+      <ion-icon name="book"></ion-icon> {{l?.resumo}} <br>
+
+      <button (click)="remover(l)" color="dark" round Clear>REMOVER</button>
+      <br>
+      <button (click)="atualizar(l)" color="dark" round clear>ATUALIZAR</button>
+
+    </ion-card-content>
+    
+    
+
+  </ion-card>
+
+</ion-content>

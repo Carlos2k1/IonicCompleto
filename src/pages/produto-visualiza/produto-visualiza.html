@@ -1,0 +1,34 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Atualizar Produto</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+    <form [formGroup]="formGroup" (ngSubmit)="atualizar()">
+        <ion-list>
+            <ion-item>
+              <ion-label floating>Nome</ion-label>
+              <ion-input formControlName="nomeProduto" type="text"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label floating>Preço</ion-label>
+                <ion-input formControlName="preco" type="text"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label floating>Categoria</ion-label>
+                <ion-input formControlName="categoria" type="text"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label floating>Descrição</ion-label>
+                <ion-input formControlName="descricao" type="text"></ion-input>
+            </ion-item>
+        </ion-list>
+        <button ion-button color="dark" round>Atualizar</button>
+    </form>
+
+</ion-content>

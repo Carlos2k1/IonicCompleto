@@ -7,6 +7,12 @@
 
 <ion-content padding>
 
+    <img src="{{imagem}}">
+
+    <ion-item>
+        <input type="file" (change)="enviaArquivo($event)"/>
+    </ion-item>
+
     <form [formGroup]="formGroup" (ngSubmit)="atualizar()">
         <ion-list>
             <ion-item>
@@ -22,7 +28,7 @@
                 <ion-input formControlName="email" type="text"></ion-input>
             </ion-item>
         </ion-list>
-        <button ion-button>Atualizar</button>
+        <button ion-button color="dark" round clear>Atualizar</button>
     </form>
 
 </ion-content>

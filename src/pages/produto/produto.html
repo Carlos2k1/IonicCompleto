@@ -1,0 +1,35 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Produto</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+    <button ion-button full (click)="novoProduto()" color="dark" round clear>Novo Produto</button>
+
+    <ion-card *ngFor="let p of listaDeProdutos">
+  
+      <ion-card-header>
+       {{p?.nomeProduto}}
+      </ion-card-header>
+    
+      <ion-card-content>
+        <ion-icon name="cash"></ion-icon> {{p?.preco}} 
+        <ion-icon name="list-box"></ion-icon> {{p?.categoria}}
+        <ion-icon name="cart"></ion-icon> {{p?.descricao}}
+  
+        <button (click)="remove(produto)" color="dark" round Clear>REMOVER</button>
+  
+        <button (click)="atualizar(produto)" color="dark" round clear>ATUALIZAR</button>
+  
+      </ion-card-content>
+      
+      
+  
+    </ion-card>
+
+</ion-content>
